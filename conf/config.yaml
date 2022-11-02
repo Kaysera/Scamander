@@ -1,0 +1,12 @@
+defaults:
+    - _self_
+    - dataset: german
+    - bb: nn
+    - rs: rs0
+    - override hydra/launcher: joblib
+    - override hydra/job_logging: colorlog
+    - override hydra/hydra_logging: colorlog
+
+hydra:
+    launcher:
+        n_jobs: 22

@@ -1,0 +1,11 @@
+CEGP
+beta -> 0.3
+c_init -> 8
+c_steps -> 30
+
+CEM
+kappa        0.16
+beta         0.23
+c_init          7
+c_steps        29
+lr_init      0.01

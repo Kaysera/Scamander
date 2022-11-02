@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+  - override /bb: nn
+  - override /dataset: fico
+  - override /rs: rs6

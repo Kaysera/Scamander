@@ -1,4 +1,5 @@
 import sys
+sys.path.append("F:\\guillermo\\Documentos\\Universidad\\Doctorado\\Articulos\\Fuzzy LORE\\Scamander")
 
 import os
 import pickle
@@ -154,8 +155,8 @@ def experiment(cfe, bb, X_train, variable_features, metric, continuous_features,
 def main():
 
     nbr_test = 100
-    dataset = 'compas'
-    black_box = 'LGBM'
+    dataset = 'adult'
+    black_box = 'RF'
     normalize = 'standard'
 
     # dataset = sys.argv[1]
@@ -184,7 +185,7 @@ def main():
     print(datetime.datetime.now(), dataset, black_box)
 
     data = get_tabular_dataset(dataset, path_dataset, normalize=normalize, test_size=test_size,
-                               random_state=random_state, encode=None)
+                               random_state=random_state, encode=None if black_box == 'LGBM' else 'onehot')
     X_train, X_test, y_train, y_test = data['X_train'], data['X_test'], data['y_train'], data['y_test']
     class_values = data['class_values']
     if dataset == 'titanic':

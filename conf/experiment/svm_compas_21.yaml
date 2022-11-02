@@ -1,0 +1,5 @@
+# @package _global_
+defaults:
+  - override /bb: svm
+  - override /dataset: compas
+  - override /rs: rs21
